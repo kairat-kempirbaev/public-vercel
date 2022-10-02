@@ -7,7 +7,7 @@
 }
 
 @layer base {
-  .navigation-border > li > a > span {
+  .navigation-border  li > a > span {
     @apply hidden md:inline-block;
   }
 };

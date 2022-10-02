@@ -20,6 +20,17 @@
   transform: scale(1.2);
 }
 
+@media (max-width: 639px) {
+  .navigation-border {
+    position: fixed;
+    z-index: 100;
+    right: 25px;
+    top: 25px;
+    height: auto;
+    width: auto;
+  }
+}
+
 .navigation-border li {
   cursor: pointer;
   background-color: transparent;
@@ -34,4 +45,3 @@
 .navigation-border li:hover {
   border-color: hsl(0 0% 100% /0.3);
 }
-
