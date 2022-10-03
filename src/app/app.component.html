@@ -1,4 +1,4 @@
-<div id="my-root" class="min-h-screen w-screen flex flex-col">
+<div [class]="navLinks[active].link" id="my-root" class="min-h-screen w-screen flex flex-col">
   <header class="flex justify-between">
     <div
       class="basis-[min(100px,calc(80px+0.05vw))] flex shrink-0 items-center justify-end h-[104px] sm:h-auto"
@@ -21,7 +21,7 @@
     </button>
     <nav
       [class.hidden]="mobileMenu"
-      class="sm:inline-block cursor-default decoration-none md:my-8 navigation-border"
+      class="sm:inline-block cursor-default decoration-none md:my-8"
     >
       <ul
         class="list-none sm:flex pt-[30px] sm:pt-0 px-10 md:px-[5rem] sm:gap-x-[1rem] md:gap-x-[min(2.5rem+1vw,3rem)] text-white sm:backdrop-blur-[20px] bg-black sm:bg-white/10 uppercase font-thin"
