@@ -1,1 +1,33 @@
-<p>destination works!</p>
+<section class="flex basis-1/2 flex-col justify-top items-center">
+  <h3 class="text-[1.6rem] text-white uppercase p-12 tracking-widest">
+    <span style="color: hsla(30, 2%, 56%, 0.55)" class="pr-[2rem] font-semibold "
+      >01</span
+    >
+    pick your destination
+  </h3>
+  <picture>
+    <source srcset="/assets/destination/image-moon.webp" type="image/webp" />
+    <img src="/assets/destination/image-moon.jpg" alt="moon" />
+  </picture>
+</section>
+
+<main class="flex basis-1/2 justify-center items-center flex-col text-white">
+  <nav>
+    <ul class="cursor-pointer">
+      <li
+        class="font-sans uppercase font-normal inline-block p-2 tracking-widest"
+        style="color: hsl(231 77% 90%)"
+        [class.active]="i == tabI"
+        *ngFor="let planet of destination; let i = index"
+      >
+        {{ planet.title }}
+      </li>
+    </ul>
+  </nav>
+  <h1 class="text-[6rem] uppercase text-white">
+    {{ destination[tabI].title }}
+  </h1>
+  <p>{{ destination[tabI].description }}</p>
+  <p>{{destination[tabI].distance}}</p>
+  <p>{{destination[tabI].tt}}</p>
+</main>

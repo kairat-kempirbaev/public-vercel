@@ -6,13 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  navLinks = [
+  protected navLinks = [
     { index: '00', link: 'home' },
     { index: '01', link: 'destination' },
     { index: '02', link: 'crew' },
     { index: '03', link: 'technology' },
   ];
-  active = 0;
-  title = 'vercel';
-  mobileMenu: boolean = true;
+  protected active = 0;
+  protected mobileMenu: boolean = true;
 }

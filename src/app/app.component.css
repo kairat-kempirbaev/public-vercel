@@ -1,5 +1,5 @@
 @media (max-width: 639px) {
-  .navigation-border {
+  nav {
     position: fixed;
     z-index: 100;
     right: 25px;
@@ -7,19 +7,4 @@
     height: auto;
     width: auto;
   }
-}
-
-.navigation-border li {
-  cursor: pointer;
-  background-color: transparent;
-  padding: 30px 0;
-  border-bottom: 3px solid hsla(120, 100%, 50%, 0);
-}
-
-.navigation-border li.active {
-  border-bottom: 3px solid white;
-}
-
-.navigation-border li:hover:not(.active) {
-  border-color: hsl(0 0% 100% /0.3);
 }
