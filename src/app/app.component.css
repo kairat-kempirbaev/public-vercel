@@ -20,6 +20,6 @@
   border-bottom: 3px solid white;
 }
 
-.navigation-border li:hover {
+.navigation-border li:hover:not(.active) {
   border-color: hsl(0 0% 100% /0.3);
 }

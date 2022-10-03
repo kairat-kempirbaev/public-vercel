@@ -1,7 +1,7 @@
 <div id="my-root" class="min-h-screen w-screen flex flex-col">
   <header class="flex justify-between">
     <div
-      class="basis-[min(100px,calc(80px+0.05vw))] flex shrink-0 items-center justify-end h-[104px]  sm:h-auto"
+      class="basis-[min(100px,calc(80px+0.05vw))] flex shrink-0 items-center justify-end h-[104px] sm:h-auto"
     >
       <img
         class="w-[48px] h-[48px]"
@@ -11,36 +11,37 @@
         alt=""
       />
     </div>
-    <button (click)="mobileMenu = !mobileMenu" [class.hidden]="!mobileMenu" class="absolute z-10 top-[40px] right-[40px] sm:hidden cursor-pointer">
+    <button
+      (click)="mobileMenu = !mobileMenu"
+      [class.hidden]="!mobileMenu"
+      class="absolute z-10 top-[40px] right-[40px] sm:hidden cursor-pointer"
+    >
       <span class="sr-only">Menu</span>
       <img src="/assets/shared/icon-hamburger.svg" />
     </button>
-    <nav [class.hidden]="mobileMenu"
-      class="sm:inline-block  cursor-default decoration-none md:my-8 navigation-border"
+    <nav
+      [class.hidden]="mobileMenu"
+      class="sm:inline-block cursor-default decoration-none md:my-8 navigation-border"
     >
       <ul
-        class="list-none sm:flex 
-        pt-[30px] sm:pt-0 px-10 md:px-[5rem] sm:gap-x-[1rem] md:gap-x-[min(2.5rem+1vw,3rem)] 
-        text-white sm:backdrop-blur-[20px] bg-black sm:bg-white/10 uppercase md:font-semibold font-thin"
+        class="list-none sm:flex pt-[30px] sm:pt-0 px-10 md:px-[5rem] sm:gap-x-[1rem] md:gap-x-[min(2.5rem+1vw,3rem)] text-white sm:backdrop-blur-[20px] bg-black sm:bg-white/10 uppercase font-thin"
       >
-      <button (click)="mobileMenu = !mobileMenu" class="absolute top-[15px] right-[15px]  sm:hidden cursor-pointer p-[2px]">
-        <img src="/assets/shared/icon-close.svg"
-        /></button>
-        <li class="active">
-          <a routerLink="home"><span>00</span> Home</a>
-        </li>
-        <li>
-          <a routerLink="destination"><span>01</span> Destination</a>
-        </li>
-        <li>
-          <a routerLink="crew"><span>02 </span> Crew</a>
-        </li>
-        <li>
-          <a routerLink="technology"><span>03</span> Technology</a>
+        <button
+          (click)="mobileMenu = !mobileMenu"
+          class="absolute top-[15px] right-[15px] sm:hidden cursor-pointer p-[2px]"
+        >
+          <img src="/assets/shared/icon-close.svg" />
+        </button>
+        <li
+          [class.active]="active == i"
+          *ngFor="let nav of navLinks; index as i"
+        >
+          <a [routerLink]="nav.link" (click)="active = i">
+            <span class="font-semibold">{{ nav.index }}</span> {{ nav.link }}
+          </a>
         </li>
       </ul>
     </nav>
   </header>
-  <router-outlet>
-  </router-outlet>
+  <router-outlet> </router-outlet>
 </div>
