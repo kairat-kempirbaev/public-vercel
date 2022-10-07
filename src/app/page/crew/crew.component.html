@@ -1,1 +1,23 @@
-<p>crew works!</p>
+<main class="flex-1 basis-1/2 text-white text-left
+flex items-center justify-center"> 
+  <section>
+    <h2 class="uppercase tracking-widest text-[1.5rem]"> <span class="text-[grey]">02</span> Meet your crew</h2>
+    <p class="uppercase tracking-wide text-[grey] text-[2rem]">
+      {{ crew[tabI].occupation }}
+    </p>
+    <p class="uppercase tracking-wide text-[2.5rem]">{{ crew[tabI].name }}</p>
+    <p class="w-[50ch] font-normal">{{ crew[tabI].mission }}</p>
+    <ul class=" flex space-x-4 flex-row ">
+      <li ngFor
+        class="rounded-full backdrop-blur-[20px] sm:bg-white/30 cursor-pointer"
+        [class.active]="i == tabI"
+        *ngFor="let member of crew; let i = index"
+        (click)="tabI = i" >
+      </li>
+    </ul>
+  </section>
+</main>
+
+<section class="flex flex-1 basis-1/2 item-end flex-col justify-end">
+  <app-progressive-picture class="" [src]="images[tabI]"></app-progressive-picture>
+</section>

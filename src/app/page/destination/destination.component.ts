@@ -1,5 +1,4 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
-import { ProgressivePictureComponent } from 'src/app/progressive-picture/progressive-picture.component';
 
 @Component({
   selector: 'app-destination',
