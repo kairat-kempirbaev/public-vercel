@@ -1,0 +1,5 @@
+<picture>
+    <source media="(max-width: 765px)" [srcset]="src.leqTablet" />
+    <source media="(min-width: 766px)" [srcset]="src.default" />
+    <img [src]="src.default" [alt]="src.alt" />
+</picture>

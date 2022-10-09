@@ -7,6 +7,7 @@ import { CrewComponent } from './page/crew/crew.component';
 import { TechnologyComponent } from './page/technology/technology.component';
 import { HomeComponent } from './page/home/home.component';
 import { ProgressivePictureComponent } from './progressive-picture/progressive-picture.component';
+import { ImageContainerComponent } from './page/technology/image-container/image-container.component';
 
 const appRoute: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -24,6 +25,7 @@ const appRoute: Routes = [
     TechnologyComponent,
     HomeComponent,
     ProgressivePictureComponent,
+    ImageContainerComponent,
   ],
   imports: [BrowserModule, RouterModule.forRoot(appRoute)],
   // exports: [RouterModule],
