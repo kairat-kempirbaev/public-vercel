@@ -1,5 +1,5 @@
-<section class="flex basis-1/2 flex-col justify-top items-center">
-  <h3 class="text-[1.6rem] text-white uppercase p-12 tracking-widest">
+<section class="flex flex-1 basis-2/3 lg:basis-1/2 flex-col justify-top items-center">
+  <h3 class="text-[1.5rem] text-white uppercase p-12 tracking-widest">
     <span style="color: hsla(30, 2%, 56%, 0.55)" class="pr-[2rem] font-semibold"
       >01</span
     >
@@ -8,7 +8,7 @@
   <app-progressive-picture [src]="images[tabI]"> </app-progressive-picture>
 </section>
 
-<main class="flex basis-1/2 justify-center flex-col text-white items-start">
+<main class="flex flex-1  basis-1/3 lg:basis-1/2 justify-center flex-col text-white items-center lg:items-start ">
   <nav >
     <ul class="cursor-pointer">
       <li
@@ -25,11 +25,11 @@
   <h1 class="text-[6rem] uppercase text-white">
     {{ destination[tabI].title }}
   </h1>
-  <p class="w-[70ch]">{{ destination[tabI].description }}</p>
+  <p class="w-[70ch] text-center lg:w-auto lg:text-left">{{ destination[tabI].description }}</p>
 
   <div class="my-[20px] border-b-[1px] w-[80%]"></div>
-  <div class="flex uppercase justify-between font-thin">
-    <p class="flex-1 basis-1/2"> <span style="color: hsl(231 77% 90%)">avg. distance </span><br/>{{ destination[tabI].distance }}</p>
-    <p class="flex-1  basis-1/2"> <span style="color: hsl(231 77% 90%)">est. travel time </span><br/>{{ destination[tabI].tt }}</p>
+  <div class="flex gap-5 uppercase font-thin pb-4">
+    <p class="inline-block"> <span style="color: hsl(231 77% 90%)">avg. distance </span><br/>{{ destination[tabI].distance }}</p>
+    <p class="inline-block"> <span style="color: hsl(231 77% 90%)">est. travel time </span><br/>{{ destination[tabI].tt }}</p>
   </div>
 </main>

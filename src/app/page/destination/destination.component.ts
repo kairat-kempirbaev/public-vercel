@@ -6,7 +6,7 @@ import { Component, HostBinding, OnInit } from '@angular/core';
   styleUrls: ['./destination.component.css'],
 })
 export class DestinationComponent implements OnInit {
-  @HostBinding('class') classes = 'flex-1 flex';
+  @HostBinding('class') classes = 'flex-1 flex flex-col lg:flex-row';
   protected destination = [
     {
       title: 'Moon',
