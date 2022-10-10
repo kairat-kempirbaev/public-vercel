@@ -1,18 +1,17 @@
 <main
-  class="flex flex-col text-white   justify-evenly md:items-start w-[80%] max-w-md "
+  class="flex flex-1 basis-1/2 flex-col items-center md:items-start pt-5 md:pl-20 "
 >
-  
-  <h2 class="uppercase tracking-widest text-[1.5rem] ">
-    <span class="text-[grey]">02</span> Meet your crew
-  </h2>
-  <article class="min-h-[250px]">
-    <p class="uppercase tracking-wide text-[grey] text-[2rem]">
+  <article class="text-center md:text-left text-white">
+    <h2 class="uppercase tracking-widest text-[1.2rem] md:text-[1.5rem] ">
+      <span class="text-[grey]">02</span> Meet your crew
+    </h2>
+    <p class="uppercase tracking-wide text-[grey] text-[1.4rem] md:text-[2rem]">
       {{ crew[tabI].occupation }}
     </p>
-    <p class="uppercase tracking-wide text-[2.5rem]">{{ crew[tabI].name }}</p>
-    <p class="font-normal">{{ crew[tabI].mission }}</p>
+    <p class="uppercase tracking-wide text-[1.8rem] md:text-[2.5rem]">{{ crew[tabI].name }}</p>
+    <p class="font-normal  max-w-lg min-h-[7em] px-3 md:px-0">{{ crew[tabI].mission }}</p>
   </article>
-  <ul class="flex space-x-1 md:space-x-4 flex-row">
+  <ul class="flex  flex-1 gap-4 pt-3">
     <li
       ngFor
       class="rounded-full backdrop-blur-[10px] bg-white/90 cursor-pointer h-[20px] w-[20px] md:h-[40px] md:w-[40px]"

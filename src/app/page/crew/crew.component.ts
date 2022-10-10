@@ -7,7 +7,7 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 })
 
 export class CrewComponent implements OnInit {
-  @HostBinding('class') classes = 'flex flex-col flex-1 md:flex-row';
+  @HostBinding('class') classes = 'flex flex-col flex-1 md:flex-row items-center md:justify-around ';
   protected crew = [
     {
       occupation: 'COMMANDER',
